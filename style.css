@@ -9,6 +9,16 @@ body * {
 }
 
 :root{
+    --text-color: white;
+    --bg-url: url(assets/bg-mobile.jpg);
+    --stroke-color:rgba(255, 255, 255, 0.7);
+    --surface-color:rgba(255, 255, 255, 0.3);
+    --surface-color-hover: rgba(0, 0, 0, 0.7);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(assets/moon-stars.svg)  
+}
+
+.light {
     --text-color: black;
     --bg-url: url(assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.2);
@@ -16,17 +26,6 @@ body * {
     --surface-color-hover: rgba(0, 0, 0, 0.1);
     --highlight-color:rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(assets/sun.svg)
-    
-}
-
-.light {
-    --text-color: white;
-    --bg-url: url(assets/bg-mobile.jpg);
-    --stroke-color:rgba(255, 255, 255, 0.7);
-    --surface-color:rgba(255, 255, 255, 0.3);
-    --surface-color-hover: rgba(0, 0, 0, 0.7);
-    --highlight-color: rgba(255, 255, 255, 0.2);
-    --switch-bg-url: url(assets/moon-stars.svg)
 }
 
 body {
@@ -87,13 +86,17 @@ ul {
     left: 0px;
     z-index: 1;
     transform: translateY(-50%);
+    animation: white-black 0.4s;
+
 }
 
-.light #switch button {
-    right: 0;
-    left: initial;
+.light #switch button { 
+ animation: black-white 0.4s forwards;
 }
 
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+}
 
 #switch span {
     display: block;
@@ -165,5 +168,24 @@ footer {
 
     .light {
         --bg-url: url(assets/bg-desktop-light.jpg);
+    }
+}
+
+/* animation */
+@keyframes black-white {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes white-black {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }
