@@ -28,9 +28,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto Link Bio é um agregador de links para usar como cartão de visitas online.
 
-- [Acesse o projeto finalizado, online](#)
+- [Acesse o projeto finalizado, online](https://jonathan-developer1.github.io/Link_Bio/)
 
-- [Assistir aulas](#)
 
 ## 📝 Licença
 
